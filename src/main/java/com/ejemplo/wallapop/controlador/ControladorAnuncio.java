@@ -38,7 +38,7 @@ public class ControladorAnuncio {
     public String listarAnuncios(@RequestParam(defaultValue = "0") int pagina, Model model) {
         Page<Anuncio> anuncios = servicioAnuncio.obtenerTodosLosAnuncios(PageRequest.of(pagina, 10));
         model.addAttribute("anuncios", anuncios);
-        return "lista-anuncios";
+        return "lista-anuncios";//comentario
     }
 
     @GetMapping("/nuevo")
